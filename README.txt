@@ -16,7 +16,7 @@ Adjacency Matrix
   because I liked using for loops more than iterators.
 
 MyDecorator
-- I used a HashSet to implement the decorations because of it's constant set and get methods.
+- I used a HashSet to implement the decorations because of its constant set and get methods.
 
 MyPrimJarnik
 - I instantiated four different decorations to be used.
@@ -29,7 +29,7 @@ MyPrimJarnik
 - The last decorator decorated an edge with a boolean that represented whether it had already been 
   visited or not. This was prevent the algorithm from decreasing the key of an entry that was no longer
   in the priority queue.
-- I instantiated a set that kept track of all the edges in the graph. A set was used because of its constant
+- I instantiated a set that kept track of all the edges in the graph. A set was used because of its constant run time
   set and get methods. This set was used to check if the edge between two vertices was in the adjacency matrix
   edge set before being added to the msf. This became necessary because of the way edges are inserted into 
   my matrix. For an undirected graph, two edges are inserted between any two nodes, but only one is added to the
@@ -37,12 +37,10 @@ MyPrimJarnik
   based on what what you choose as the beginning and end vertices for the inputs. Because I couldn't be sure 
   what the inputs would be, I decided to make the set of all the edges and check both outcomes of the getOpposite()
   method to see if they were in that set before I added one to the msf.
-- The rest of the algorithm was done pretty standardly I think.
 
 MyPageRank
 - I have an extra hash map to keep track of previous rank values. This was used to calculate the what the 
   current rank values should be.
-- array of ou
 - I made a list of all the sinks so that I could iterate over them in the handleSinks() method.
 - There's a point in my while loop where I loop through all the entries in the current ranks hash map to 
   copy those ranks over to the previous ranks hash map before the loops ends. Originally I tried to just set
@@ -53,8 +51,8 @@ MyPageRank
 - I tried to store the outgoing edges for each node in a list or hash map so that I wouldn't have to use the 
   numOutgoingEdges() method to get the new rank for each vertex, since that would add to the runtime. However, I kept
   getting a bug that no matter what I did, the list or map of outgoing edges wouldn't give the correct value for the
-  number of outgoing edges for a node, resulting in division by zero sometimes. I did by best to debug this with print
-  statements but I'm still stumped. So as a result, while calculating the new rank, I so use the numOutgoingEdges() 
+  number of outgoing edges for a node, resulting in division by zero sometimes. I did by best to debug this but did not
+  figure it out. So as a result, while calculating the new rank, I so use the numOutgoingEdges() 
   method for every vertex.
   
 
@@ -65,8 +63,7 @@ Test Cases:
 
 GraphTest
 - Every test for this class was done on both an undirected and directed graph, unless otherwise specified.
-  for the sake of saving time and space, I will only list the undirected graph tests. But again, there is 
-  another test with 'Directed' instead of 'Undirected' for each of these unless I mention otherwise.
+  for the sake of saving time and space, I will only list the undirected graph tests.
 - testInsertEdgesUndirected() tests that the insertEdges() method functions properly.
 - testVerticesUndirected() tests that the vertices() method returns an iterator with all the graph's vertices.
 - testEdgesIteratorUndirected tests that the edges() method returns an iterator with all the graph's edges.
