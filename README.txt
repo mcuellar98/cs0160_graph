@@ -39,7 +39,7 @@ MyPrimJarnik
   method to see if they were in that set before I added one to the msf.
 
 MyPageRank
-- I have an extra hash map to keep track of previous rank values. This was used to calculate the what the 
+- I have an extra hash map to keep track of previous rank values. This was used to calculate what the 
   current rank values should be.
 - I made a list of all the sinks so that I could iterate over them in the handleSinks() method.
 - There's a point in my while loop where I loop through all the entries in the current ranks hash map to 
