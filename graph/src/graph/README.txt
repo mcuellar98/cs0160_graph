@@ -16,7 +16,7 @@ Adjacency Matrix
   because I liked using for loops more than iterators.
 
 MyDecorator
-- I used a HashSet to implement the decorations because of it's constant set and get methods.
+- I used a HashSet to implement the decorations because of its constant set and get methods.
 
 MyPrimJarnik
 - I instantiated four different decorations to be used.
@@ -40,9 +40,8 @@ MyPrimJarnik
 - The rest of the algorithm was done pretty standardly I think.
 
 MyPageRank
-- I have an extra hash map to keep track of previous rank values. This was used to calculate the what the 
+- I have an extra hash map to keep track of previous rank values. This was used to calculate what the 
   current rank values should be.
-- array of ou
 - I made a list of all the sinks so that I could iterate over them in the handleSinks() method.
 - There's a point in my while loop where I loop through all the entries in the current ranks hash map to 
   copy those ranks over to the previous ranks hash map before the loops ends. Originally I tried to just set
